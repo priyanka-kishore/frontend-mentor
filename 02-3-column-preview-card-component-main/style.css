@@ -1,0 +1,121 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--very-light-gray);
+}
+
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+main {
+  display: flex;
+  max-width: 60rem;
+  margin: 0 auto;
+  height: 30rem;
+  margin-top: 5rem;
+}
+
+.up {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 3rem 2rem;
+  color: var(--transparent-white)
+}
+
+.section h1 {
+  margin: 1.5rem 0;
+}
+
+.section p {
+  margin-bottom: 2rem;
+}
+
+#sedan {
+  background-color: var(--bright-orange);
+}
+
+#suv {
+  background-color: var(--dark-cyan);
+}
+
+#luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+
+button {
+  font: inherit;
+  border: 2px solid var(--very-light-gray);
+  background-color: var(--very-light-gray);
+  padding: 1rem;
+  border-radius: 10rem;
+  width: 10rem;
+
+  /* makes button text color see-through */
+  mix-blend-mode: screen; 
+}
+
+button:hover {
+  color: var(--very-light-gray);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 645px) {
+  html {
+    min-width: 300px;
+  }
+
+  main {
+    display: initial;
+  }
+}
+
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 1rem;
+  width: 100%;
+  
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
